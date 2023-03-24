@@ -1,0 +1,190 @@
+*{
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #e7e4e4;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+}
+
+header{
+    position: sticky;
+    height: 64px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header, footer{
+    background-color: #3f4bf9;
+    color: #fff;
+    padding-top: 4px;
+}
+
+header > .container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    padding-bottom: 8px;
+}
+
+h1{
+    font-style: italic;
+}
+
+nav{
+    background-color: #3f4bf9;
+    padding: 16px 0;
+}
+
+nav li{
+    display: inline;
+    list-style: none;
+    margin-right: 16PX;
+    font-size: 90%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.sobre-a-loja{
+    margin: 0 auto;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.sobre-a-loja img{
+    width: 40%;
+    margin-right: 16px;
+}
+
+section h1{
+    color: #3f4bf9;
+    border-bottom: 2px solid #3f4bf9;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.estoque{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+}
+
+.item img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.item h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.item p{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.item button{
+    width: 100%;
+    background-color: #3f4bf9;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* Visão Tablet */
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .sobre-a-loja{
+        display: block;
+        padding: 2px;
+    }
+
+    .sobre-a-loja img{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 4px;
+    }
+    
+    .estoque{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 2%;
+    }
+
+    .item button{
+        margin-bottom: 24px;
+    }
+
+}
+
+/* Visão Celular */
+@media screen and (max-width: 640px) {
+    header{
+        height: 92px;
+    }
+
+    .menu{
+        display: block;
+        position: relative;
+        right: 0;
+        border: none;
+    }
+    
+    .menu li{
+        display: block;
+        padding: 4px;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+    
+    .sobre-a-loja{
+        display: block;
+    }
+
+    .sobre-a-loja img{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .estoque{
+        margin: 0 auto;
+        display: block;
+    }
+
+    .item button{
+        margin-bottom: 24px;
+    }
+}
